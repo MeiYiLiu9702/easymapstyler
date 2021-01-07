@@ -47,3 +47,4 @@
 * [Model Builder](https://github.com/YuChunTsao/WebGISModeler?)平台可以整合資料庫，作為資料來源或是儲存的空間。可以匯出模型定義檔案(json, xml, yaml...)→匯出樣式（.sld）
 * **定義前段地圖框架的style與sld的對應**
 * SLD的應用場景，以及各個地圖框架是否存在通用的樣式描述？
+* 樣式編輯參考：https://maputnik.github.io/editor/
