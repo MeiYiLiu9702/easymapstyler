@@ -8,9 +8,6 @@
     * 使用者貼上一google drive共享連結，允許平台存取該目錄的資源。
     * 拖曳本地端資源到地圖上展示
 
-Example:
-![](https://i.imgur.com/m1JQd5s.png)
-
 3. 資料本身唯讀，樣式本身可以rw。網頁本身get data and symbol。前端本身有一個功能可以把 json 形式的 symbol 轉換成 qml 等開放格式
 4. 有隨時自動存檔的功能與存檔按鈕。
 5. [未來ㄉ坑]使用者自行繪製圖徵，且可輸出為geojson並搭配平台的樣式表
