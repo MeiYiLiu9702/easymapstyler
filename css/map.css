@@ -1,0 +1,80 @@
+*{
+    
+}
+
+body{
+  background-color: #DBD2B6;
+  font-family: source-han-sans-traditional,sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  background-image: url("../image/bg_img.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  /* background: "./image/bg_img.jpg"; */
+}
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
+h2{
+  font-weight: 700;
+}
+
+#navBar{
+  background-color: #5F5B4F;
+  font-weight: 700;  
+}
+
+
+.img-item{
+  width: 100%;
+}
+
+
+.map{
+    position: absolute;
+    left: 0%;
+    margin: auto;
+    width: 100%;
+    padding: 0px;
+    height: 100%;
+    background-color: rgba(100, 100, 150, 0.8);
+    z-index:99999; /*最上層 */
+    overflow: hidden;
+}
+
+#footer {
+    text-align: justify;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 100;
+    font-style: normal;    
+    background-color: #C2BAA1;
+    margin-top: 1%;
+  }
+/* RWD control */
+@media (max-width:800px) {
+  #imageDemo{
+      margin: 0px;
+      padding: 0px;
+  }
+  #carouselExampleFade{
+  margin: 0%;
+  padding: 0%;
+  width:100%;
+  }
+  #info{
+      width: 100%;
+      padding: 3%,10%;
+  }
+  .map{
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      left: 0%;
+  }
+
+}

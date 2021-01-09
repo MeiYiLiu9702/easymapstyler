@@ -1,0 +1,86 @@
+*{
+    
+  }
+
+body{
+    background-color: #DBD2B6;
+    font-family: source-han-sans-traditional,sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    background-image: url("../image/bg_img.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    /* background: "./image/bg_img.jpg"; */
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+h1{
+    font-weight: 800;
+}
+h1{
+    font-weight: 700;
+}
+
+#navBar{
+    background-color: #5F5B4F;
+    font-weight: 700;  
+}
+#footer {
+    position: relative;
+    bottom: 0px;
+    text-align: justify;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 100;
+    font-style: normal;    
+    background-color: #C2BAA1;
+    margin-top: 1%;
+}
+#imageDemo{
+    
+    margin: auto;
+    overflow: hidden;
+}
+#carouselExampleFade{
+    background-color: rgba(193, 212, 219, 0.8);
+    margin: auto;
+    width: 65%;
+    
+}
+
+.img-item{
+    width: 100%;
+}
+
+
+
+#info{
+    width: 63.8%;
+    margin: auto;
+    text-align: center;
+    font-family: source-han-serif-tc, serif;
+    font-style: normal;
+    font-weight: 100;
+    background-color: rgba(193, 212, 219, 0.8);
+}
+/* RWD control */
+@media (max-width:1000px) {
+    #imageDemo{
+        margin: 0px;
+        padding: 0px;
+    }
+    #carouselExampleFade{
+    margin: 0%;
+    padding: 0%;
+    width:100%;
+    }
+    #info{
+        width: 100%;
+        padding: 3%,10%;
+    }
+}

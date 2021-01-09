@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/logo.ico"/>
+        <link rel="bookmark" href="/logo.ico"/>
+        <title>Easy Map Styler</title>
+        <!-- Resource -->
+        <!-- font -->
+        <script>
+            (function(d) {
+              var config = {
+                kitId: 'uis2ljk',
+                scriptTimeout: 3000,
+                async: true
+              },
+              h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            })(document);
+        </script>
+        
+        <!-- bootatrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <!-- icon -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <!-- openlayers -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css">
+        <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
+        <!-- custom -->
+        <link rel="stylesheet" href="./css/map.css">
+        
+    </head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg" id="navBar" style="background-color: #5F5B4F;">
+        <a class="navbar-brand" href="index.html" style="padding:0px 0px 0px 10px; color: #ffffff;">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-map" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M15.817.613A.5.5 0 0 1 16 1v13a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 14.51l-4.902.98A.5.5 0 0 1 0 15V2a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0l4.902.98 4.902-.98a.5.5 0 0 1 .415.103zM10 2.41l-4-.8v11.98l4 .8V2.41zm1 11.98l4-.8V1.61l-4 .8v11.98zm-6-.8V1.61l-4 .8v11.98l4-.8z"/>
+              </svg>
+              &ensp;EasyMapStyler
+        </a>
+        <!-- RWD List button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarList" aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-border-width" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 3.5A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-2zm0 5A.5.5 0 0 1 .5 8h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1zm0 4a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+        </button>
+        <!-- List -->
+        <div class="collapse navbar-collapse " id="navbarList"  style="text-align: center;">
+            <ul class="navbar-nav">
+                <li class="nav-item active" >
+                  <a class="nav-link nav-link-mv" href="index.html" style="color: #ffffff;">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-link-mv" href="#" style="color: #ffffff;">地圖展示</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="about.html" style="color: #ffffff;">關於我們</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <div class="container-fluid" style="overflow:hidden;">
+        <div class="row">
+            <div class="col-8 map" style="padding: 0%;" id="Map">
+            </div>
+
+            <div class="col-4 description" style="position: absolute;right: 0px;" id="description" >
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+    <!-- footer -->
+    <div class="container-fluid fixed-bottom" id="footer">
+        <div class="row" >
+            <div class="col">製作：劉玫宜、曹宇鈞</div>
+            <!-- <div class="col" style="text-align: right;">
+                <a href="https://www.facebook.com/taipeistorymap/"><i class="fa-2x fab fa-facebook"></i></a>
+            </br>
+                <a href="http://www.geog.ntu.edu.tw/index.php/tw/" target="_blank"><img src="./image/GEOG_logo.png" style="width:30px;margin-top: 1%;" alt="..."></a>
+            </div> -->
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/map_v1.js"></script>
+</body>
+</html>
